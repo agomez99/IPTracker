@@ -10,113 +10,11 @@
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOry7hZFg32Xgby6p2zXC44owJHUKVerw&callback=initMap"
     async defer></script>
+    <link rel="stylesheet" href="styles.css">
+
   <script src="script.js"></script>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
-
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
-    body {
-      font-family: 'Rubik', sans-serif;
-    }
-
-    .bg-top {
-      background-image: url(./images/pattern-bg-desktop.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 350px;
-    }
-
-    .header {
-      text-align: center;
-      color: white;
-      padding-top: 5%;
-    }
-
-    .input {
-      width: 100px;
-      height: 60px;
-      margin-left: 50px;
-      display: block;
-      border-radius: 15px;
-      border: none;
-      flex-grow: 2;
-    }
-
-    input::placeholder {
-      padding-left: 50px;
-      font-size: 18px;
-    }
-
-    form {
-      flex-direction: row;
-      display: flex;
-      margin: 2% 30%;
-    }
-
-    .input-btn {
-      left: -20px;
-      width: 60px;
-      position: relative;
-      border-radius: 0px 15px 15px 0px;
-      background-color: black;
-      color: white;
-    }
-
-    .results {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 75%;
-      height: 150px;
-      margin: 0% 10% 0% 10%;
-      padding: 2%;
-      background-color: #ffffff;
-      border-radius: 10px;
-      position: absolute;
-      top: 300px;
-    }
-
-    .results h3 {
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-      font-weight: 600;
-      color: gray;
-    }
-
-    .results p {
-      margin: 0;
-      padding: 0;
-      font-size: 1.8rem;
-      font-weight: 500;
-    }
-
-    .results-item {
-      text-align: center;
-    }
-
-    #map {
-      height: 60vh;
-    }
-
-    hr {
-
-      border: none;
-      border-left: 1px solid hsla(200, 10%, 50%, 100);
-      height: 70px;
-      width: 1px;
-    }
-  </style>
 </head>
+
 <body>
   <div class="container-fluid g-0">
     <div class="bg-top">
