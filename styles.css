@@ -57,6 +57,9 @@ form {
   background-color: black;
   color: white;
 }
+.input-btn:hover{
+    background-color: hsl(0, 0%, 17%);
+}
 
 .results {
   display: flex;
