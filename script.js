@@ -24,6 +24,7 @@ function initMap() {
           updateDetails(ipDetails);
         })
         .catch(error => console.log('Error:', error));
+
     });
 
   if (navigator.geolocation) {
@@ -77,9 +78,11 @@ function trackIP(event) {
     .catch(error => console.log('Error:', error));
 }
 
+
 function updateDetails(details) {
   document.getElementById('ip-address').innerHTML = details.ipAddress;
   document.getElementById('location').innerHTML = details.location;
   document.getElementById('utc').innerHTML = details.utc;
   document.getElementById('isp').innerHTML = details.isp;
 }
+
