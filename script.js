@@ -5,14 +5,11 @@ const mapOptions = {
   zoom: 14,
 };
 
-
 function initMap() {
   fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
       const ipAddress = data.ip;
-
-      // Get the user's location, city, and service provider based on the IP address
       fetch(`https://ipapi.co/${ipAddress}/json/`)
         .then(response => response.json())
         .then(data => {
@@ -29,12 +26,12 @@ function initMap() {
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
-      var userLocation = {
+      const userLocation = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
       mapOptions.center = userLocation;
-      const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      const map = new google.maps.Map(document.getElementById('map'), mapOptions);
       const marker = new google.maps.Marker({
         position: mapOptions.center,
         map,
@@ -42,7 +39,7 @@ function initMap() {
         animation: google.maps.Animation.DROP
       });
       map.setCenter(marker.getPosition());
-      document.getElementById("ipForm").addEventListener("submit", trackIP);
+      document.getElementById('ipForm').addEventListener('submit', trackIP);
     });
   }
 }
