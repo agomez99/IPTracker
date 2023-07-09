@@ -5,6 +5,8 @@ const mapOptions = {
   zoom: 14,
 };
 
+window.onload = initMap;
+
 function initMap() {
   fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
